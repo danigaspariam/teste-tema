@@ -11,13 +11,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false}));
 
 
-let db = [
-    { '1': { numero: '1'} },
-    { '2': { numero: '2'} },
-    { '3': { numero: '3'} },
-  
-
-]
+let db = [10, 20, 30, 40];
 
 app.get('/', (req, res) => {
     return res.json(db);
