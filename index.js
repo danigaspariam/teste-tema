@@ -14,7 +14,10 @@ app.use(bodyParser.urlencoded({ extended: false}));
 let db = [10, 20, 30, 40];
 
 app.get('/', (req, res) => {
-    return res.json(db);
+    var inteiro = req.params.inteiro;
+    return res.json({
+        message: `${db.length} é o total de números inteiros`
+    });
 })
 
 app.listen(3030, () =>{
